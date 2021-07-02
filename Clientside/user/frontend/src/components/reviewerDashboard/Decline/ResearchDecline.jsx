@@ -34,14 +34,20 @@ const ResearchDecline = () => {
       <table id="customers">
         <tbody>
           <tr>
-            <th>Date</th>
-            <th>Topic</th>
+            <th> Date </th>
+            <th> Topic OF Reserch Paper </th>
           </tr>
 
           <tr>
             {deletedpaper.map((deletedpaper) => (
               <tr key={deletedpaper._id}>
-                <td>{deletedpaper.createdAt}</td>
+                <td>
+                {
+                new Date(deletedpaper.createdAt).toDateString() +
+                  "   "   +
+                  new Date(deletedpaper.createdAt).toLocaleTimeString()
+                  }
+              </td>
                 <td>{deletedpaper.topic}</td>
               </tr>
             ))}

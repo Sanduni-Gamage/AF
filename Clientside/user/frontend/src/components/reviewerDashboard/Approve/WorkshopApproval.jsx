@@ -30,7 +30,11 @@ const WorkshopApproval = () => {
           {pendingWorkshops &&
             pendingWorkshops.map((approvedworkshop) => (
               <tr key={approvedworkshop._id}>
-                <td>{approvedworkshop.dueDate}</td>
+                <td>
+                  {new Date(approvedworkshop.dueDate).toDateString() +
+                    " " +
+                    new Date(approvedworkshop.dueDate).toLocaleTimeString()}
+                </td>
                 <td>{approvedworkshop.topic}</td>
               </tr>
             ))}

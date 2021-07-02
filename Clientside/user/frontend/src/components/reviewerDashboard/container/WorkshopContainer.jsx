@@ -63,7 +63,7 @@ const ResearchPaperApproval = () => {
         draggable
         pauseOnHover
       />
-      <h3>Workshop Request</h3>
+      <h3>Submited WorkShop</h3>
       <hr></hr>
       <div className="reviewer-research-card-container">
         <div className="reviewer-research-card">
@@ -72,7 +72,12 @@ const ResearchPaperApproval = () => {
               <span className="reviewer-research-date">Created Date</span>
             </div>
             <hr></hr>
-            <span className="reviewer-research-date">{card.dueDate}</span>
+            <span className="reviewer-research-date">
+            {
+            new Date(card.dueDate).toDateString() +
+                " " +
+                new Date(card.dueDate).toLocaleTimeString()}
+            </span>
           </div>
           <header>
             <hr></hr>

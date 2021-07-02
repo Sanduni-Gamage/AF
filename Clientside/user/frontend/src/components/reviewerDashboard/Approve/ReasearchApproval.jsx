@@ -30,7 +30,11 @@ const ResearchApproval = () => {
         {approvePaper &&
           approvePaper.map((approvedpaper) => (
             <tr key={approvedpaper._id}>
-              <td>{approvedpaper.createdAt}</td>
+              <td>
+                {new Date(approvedpaper.createdAt).toDateString() +
+                  " " +
+                  new Date(approvedpaper.createdAt).toLocaleTimeString()}
+              </td>
               <td>{approvedpaper.topic}</td>
             </tr>
           ))}

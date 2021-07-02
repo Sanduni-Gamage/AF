@@ -24,19 +24,26 @@ const NewResearch = () => {
   }, []);
   return (
     <div>
-      <h3>Research Paper Request</h3>
+      <h3>Pending Research Papers</h3>
       <hr></hr>
       <div>
         <table id="customers">
           <tr>
             <th>Date</th>
             <th>Topic</th>
-            <th>View</th>
+            <th>Action</th>
           </tr>
           {pendingPublications &&
             pendingPublications.map((paper) => (
               <tr key={paper._id}>
-                <td>{paper.createdAt}</td>
+                <td>{" "}
+                  {
+                  new Date(paper.createdAt).toDateString() +
+                    " " +
+                    new Date(paper.createdAt).toLocaleTimeString()
+                    }
+                    
+                    </td>
                 <td>{paper.topic}</td>
                 <td>
                   <div>

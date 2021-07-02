@@ -19,10 +19,12 @@ const ResearchPaperApproval = () => {
       },
     });
 
+
     const data = await resCard.json();
     setCard(data.card);
     setbtnClick(true);
   }, []);
+
   console.log(card);
   const Approvehandle = async (id) => {
     const res = await fetch(`${BASE_URL}/publication/approve/${id}`, {
@@ -50,6 +52,8 @@ const ResearchPaperApproval = () => {
       setbtnClick(id);
     }
   };
+
+
   return (
     <div>
       <ToastContainer
@@ -69,16 +73,26 @@ const ResearchPaperApproval = () => {
         <div className="reviewer-research-card">
           <div>
             <div>
+
               <span className="reviewer-research-date">Created Date</span>
             </div>
-            <hr></hr>
-            <span className="reviewer-research-date">{card.createdAt}</span>
-          </div>
-          <header>
-            <hr></hr>
-            <h2>{card.topic}</h2>
-          </header>
 
+            <hr></hr>
+
+            {
+            new Date(card.createdAt).toDateString() +
+                "   " +
+                new Date(card.createdAt).toLocaleTimeString()
+                }
+          </div>
+
+          <header>
+
+            <hr></hr>
+
+            <h2>{card.topic}</h2>
+            
+          </header>
           <div>
             <tr>
               <td>

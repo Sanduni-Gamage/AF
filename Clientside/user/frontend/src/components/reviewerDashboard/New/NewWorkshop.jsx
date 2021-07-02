@@ -25,19 +25,27 @@ const NewWorkshop = () => {
   }, []);
   return (
     <div>
-      <h3>Workshop Request</h3>
+      <h3> Pending Workshops </h3>
       <hr></hr>
       <div>
         <table id="customers">
           <tr>
-            <th>Due Date</th>
+            <th>Date</th>
             <th>Topic</th>
-            <th>View</th>
+            <th>Action</th>
           </tr>
           {pendingWorkshop &&
             pendingWorkshop.map((workshop) => (
               <tr key={workshop._id}>
-                <td>{workshop.dueDate}</td>
+                 <td>
+                  {" "}
+
+                  {
+                  new Date(workshop.dueDate).toDateString() +
+                    "   " +
+                    new Date(workshop.dueDate).toLocaleTimeString()
+                    }
+                </td>
                 <td>{workshop.topic}</td>
                 <td>
                   <div>
