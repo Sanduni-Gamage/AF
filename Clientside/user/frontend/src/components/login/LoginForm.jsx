@@ -156,7 +156,7 @@ const LoginForm = () => {
 							}
 							disabled={disabled}
 						/>
-						<label htmlFor="presenter">Presenter</label>
+						<label htmlFor="presenter">Workshop Presenter</label>
 					</div>
 					<div className="attendee">
 						<input

@@ -6,6 +6,7 @@ import Places from '../Places/Places';
 import useWindowPosition from '../useWindowPosition/useWindowPosition';
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+
 //import { TouchableWithoutFeedback, Text } from 'react-native';
 
 const useStyles = makeStyles((theme) => ({

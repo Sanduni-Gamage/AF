@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
 
-import './Footer.css';
+import './footer.css';
 
 import FooterLogo from "url:../../assets/images/favicon.png";
 
@@ -9,8 +9,8 @@ const Footer = () => {
 	return (
 		<div className='footer-container'>
 
-<div className='footer-logo' color="gold">
-            <Link to='/' >
+<div className='footer-logo' >
+            <Link to='/' className='footer-logo' >
               ICAF 
               
             </Link>
@@ -20,7 +20,7 @@ const Footer = () => {
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             
-            <h2><Link to="/blogs">Blogs</Link></h2>
+            <h2><Link to="/blogs">Notices</Link></h2>
 						
 						
           </div>
