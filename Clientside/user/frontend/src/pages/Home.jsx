@@ -5,6 +5,7 @@ import TitleContent from "../components/home/TitleContent";
 import SpeakerContent from "../components/home/SpeakerContent";
 import Countdown from "../components/home/Countdown";
 import Footer from "../components/footer/Footer";
+import Vist from "../components/home/VisitPage";
 
 import "./styles/Home.css";
 import LandingImg from "url:../../src/assets/images/a1.jpg";
@@ -29,6 +30,7 @@ const Home = () => {
 				<TitleContent />
 				<Countdown />
 				<SpeakerContent />
+				<Vist />
 				
 				
 			</motion.div>
