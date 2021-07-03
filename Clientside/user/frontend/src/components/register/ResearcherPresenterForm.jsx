@@ -109,23 +109,25 @@ const PresenterForm = ({ title }) => {
 				pauseOnHover
 			/>
 			{file && <Loading file={file} setFile={setFile} />}
-			<h1>{title} Registration</h1>
-			<motion.form
+			
+			<form
 				className="login-form"
 				initial={{ x: 300, opacity: 0 }}
 				animate={{ x: 0, opacity: 1 }}
 				transition={{ type: "tween", duration: 0.8 }}
 			>
-				<motion.div
+				<div
 					className="user-credentials"
 					initial={{ x: 100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
 					transition={{ type: "tween", duration: 0.8, delay: 0.2 }}
 				>
+					<h2>Sign Up As a {title}</h2>
 					<label htmlFor="email">Email</label>
 					<input
 						type="email"
 						name="email"
+						placeholder="Your Email address"
 						id="email"
 						required
 						autoComplete="off"
@@ -138,6 +140,7 @@ const PresenterForm = ({ title }) => {
 					<input
 						type="tel"
 						name="mobile-number"
+						placeholder="Your Mobile Number"
 						id="mobile-number"
 						required
 						maxLength="10"
@@ -153,6 +156,7 @@ const PresenterForm = ({ title }) => {
 							<input
 								type="text"
 								name="university"
+								placeholder="Your University/Institute"
 								id="university"
 								required
 								autoComplete="off"
@@ -163,11 +167,12 @@ const PresenterForm = ({ title }) => {
 							/>
 						</div>
 						<div className="last-name">
-							<label htmlFor="department">Department</label>
+							<label htmlFor="department">Faculty</label>
 							<input
 								type="text"
 								name="department"
 								id="department"
+								placeholder="Your Faculty of Study"
 								required
 								autoComplete="off"
 								value={userData.department}
@@ -179,7 +184,7 @@ const PresenterForm = ({ title }) => {
 					</div>
 					<div className="name-info">
 						<div className="first-name">
-							<label htmlFor="topic">Your Topic</label>
+							<label htmlFor="topic">Add a Topic to your Work </label>
 							<input
 								type="text"
 								name="topic"
@@ -193,7 +198,7 @@ const PresenterForm = ({ title }) => {
 							/>
 						</div>
 						<div className="last-name">
-							<label htmlFor="material">Upload your materials</label>
+							<label htmlFor="material">Upload your Documents</label>
 							<input
 								type="file"
 								accept=".pdf, .zip, .rar, .ppt, .pptx"
@@ -223,9 +228,9 @@ const PresenterForm = ({ title }) => {
 						</div>
 					)}
 					<div>{error && <div className="error">{error}</div>}</div>
-				</motion.div>
+				</div>
 				<div className="button-container">
-					<motion.button
+					<button
 						className="gradient-cta transparent"
 						initial={{ x: 10, opacity: 0 }}
 						animate={{ x: 0, opacity: 1 }}
@@ -233,8 +238,8 @@ const PresenterForm = ({ title }) => {
 						onClick={() => setCurrentStep(1)}
 					>
 						Back
-					</motion.button>
-					<motion.button
+					</button>
+					<button
 						type="submit"
 						className="gradient-cta"
 						initial={{ x: 10, opacity: 0 }}
@@ -243,9 +248,9 @@ const PresenterForm = ({ title }) => {
 						onClick={handleRegister}
 					>
 						Register
-					</motion.button>
+					</button>
 				</div>
-			</motion.form>
+			</form>
 		</div>
 	);
 };

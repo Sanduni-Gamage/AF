@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { motion } from "framer-motion";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -52,13 +52,13 @@ const AttendeeForm = () => {
 				pauseOnHover
 			/>
 			<h1>Attendee Registration</h1>
-			<motion.form
+			<form
 				className="login-form"
 				initial={{ x: 300, opacity: 0 }}
 				animate={{ x: 0, opacity: 1 }}
 				transition={{ type: "tween", duration: 0.8 }}
 			>
-				<motion.div
+				<div
 					className="user-credentials"
 					initial={{ x: 100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
@@ -151,9 +151,9 @@ const AttendeeForm = () => {
 							/>
 						</div>
 					</div>
-				</motion.div>
+				</div>
 				<div className="button-container">
-					<motion.button
+					<button
 						className="gradient-cta transparent"
 						initial={{ x: 10, opacity: 0 }}
 						animate={{ x: 0, opacity: 1 }}
@@ -161,8 +161,8 @@ const AttendeeForm = () => {
 						onClick={() => setCurrentStep(1)}
 					>
 						Back
-					</motion.button>
-					<motion.button
+					</button>
+					<button
 						type="submit"
 						className="gradient-cta"
 						initial={{ x: 10, opacity: 0 }}
@@ -171,9 +171,9 @@ const AttendeeForm = () => {
 						onClick={handleRegister}
 					>
 						Register
-					</motion.button>
+					</button>
 				</div>
-			</motion.form>
+			</form>
 		</div>
 	);
 };

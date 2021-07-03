@@ -1,12 +1,11 @@
 import React from "react";
 import { FaUserTie } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 import { getUserType } from "../../auth/userAuth";
 
 const ProfileCard = ({ profile }) => {
 	return (
-		<motion.div
+		<div
 			className="profile-card"
 			initial={{ y: 100, opacity: 0 }}
 			animate={{ y: 0, opacity: 1 }}
@@ -23,7 +22,7 @@ const ProfileCard = ({ profile }) => {
 				} `}</h3>
 				<p>{profile.email}</p>
 			</div>
-		</motion.div>
+		</div>
 	);
 };
 

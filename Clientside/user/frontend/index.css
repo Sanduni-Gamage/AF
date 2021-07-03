@@ -1,7 +1,7 @@
 /* Global styles */
 :root {
-  --primary-accent-color: #ee2647;
-  --secondary-accent-color: #e25e69;
+  --primary-accent-color: #f5bf0d;
+  --secondary-accent-color: #c25903;
   --title-font-weight: 700;
   --subtitle-font-weight: 500;
   --standard-font-weight: 500;
@@ -28,6 +28,7 @@ body {
   padding: 0 2rem;
   margin: 0 auto;
   overflow-x: hidden;
+  background-image: url(./src/assets/images/backgroung.png);
 }
 
 a {

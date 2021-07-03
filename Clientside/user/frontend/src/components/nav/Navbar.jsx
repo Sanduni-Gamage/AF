@@ -5,7 +5,7 @@ import { IoNotificationsSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import logo from "url:../../assets/images/ICAF.png";
+import logo from "url:../../assets/images/backgroung.gif";
 import { deleteUserAuth, getUserType } from "../../auth/userAuth";
 import { RegisterDataContext } from "../../context/RegisterFormContext";
 import NotificationList from "../notification/NotificationList";
@@ -19,7 +19,7 @@ const Navbar = () => {
 	const [notificationTray, setNotificationTray] = useState("");
 
 	return (
-		<motion.header
+		<header
 			initial={{ y: -30, opacity: 0 }}
 			animate={{ y: 0, opacity: 1 }}
 			transition={{ type: "tween", duration: 0.5, delay: 0.1 }}
@@ -27,17 +27,18 @@ const Navbar = () => {
 			
 			<Link to="/">
 				<img src={logo} alt="nav-logo" className="nav-logo"  />
+				<center><h1>ICAF</h1></center>
 			</Link>
 			<nav id={isMobile ? "menu-open" : ""} onClick={() => setIsMobile(false)} className="navbar-container">
 				{!isLogin ? (
-					<Link to="/">Home</Link>
+					<a><Link to="/">Home</Link></a>
 				) : (
-					<Link to={`/auth/user/${getUserType()}/dashboard`}>Dashboard</Link>
+					<a><Link to={`/auth/user/${getUserType()}/dashboard`}>Dashboard</Link></a>
 				)}
-				<Link to="/workshops">Workshops</Link>
-				<Link to="/publications">Researches</Link>
-				<Link to="/blogs">Notices</Link>
-				<Link to="/downloads">Downloads</Link>
+				<a><Link to="/workshops" >Workshops</Link></a>
+				<a><Link to="/publications">Researches</Link></a>
+				<a><Link to="/blogs">Notices</Link></a>
+				<a><Link to="/downloads">Downloads</Link></a>
 			</nav>
 			<div
 				className="nav-cta"
@@ -80,7 +81,7 @@ const Navbar = () => {
 				{isMobile ? <IoMdClose /> : <CgMenuRight />}
 			</button>
 			
-		</motion.header>
+		</header>
 	);
 };
 

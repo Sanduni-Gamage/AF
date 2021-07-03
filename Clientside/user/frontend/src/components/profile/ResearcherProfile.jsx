@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+
 
 import { BASE_URL } from "../../config/config";
 import { getUserToken } from "../../auth/userAuth";
@@ -41,7 +41,7 @@ const ResearcherProfile = () => {
 				</Link>
 			</div>
 			<h1>Your Research Uploads</h1>
-			<motion.div
+			<div
 				className="publications"
 				initial={{ y: 100, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
@@ -52,7 +52,7 @@ const ResearcherProfile = () => {
 						<PublicationCard publication={publication} key={publication._id} />
 					);
 				})}
-			</motion.div>
+			</div>
 		</div>
 	);
 };

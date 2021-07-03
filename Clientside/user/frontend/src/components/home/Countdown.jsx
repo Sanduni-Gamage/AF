@@ -10,7 +10,7 @@ const Countdown = () => {
 	let interval = useRef();
 
 	const startTimer = () => {
-		const countdownDate = new Date("July 10, 2021 00:00:00").getTime();
+		const countdownDate = new Date("July 30, 2021 00:00:00").getTime();
 
 		interval = setInterval(() => {
 			const now = new Date().getTime();
@@ -46,7 +46,7 @@ const Countdown = () => {
 		<>
 			{isShow && (
 				<section className="countdown-content">
-					<h1>Save The Date : 04 July 2021</h1>
+					<h1>Save The Date : 30 July 2021</h1>
 					<div className="countdown">
 						<div className="days">
 							<h1>{timerDays}</h1>

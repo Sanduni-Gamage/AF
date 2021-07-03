@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { MdFormatQuote } from "react-icons/md";
-import SpeakerCard from "./SpeakerCard";
+
 
 
 const SpeakerContent = () => {

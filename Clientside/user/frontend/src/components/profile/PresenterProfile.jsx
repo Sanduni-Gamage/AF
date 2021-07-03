@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+
 
 import { BASE_URL } from "../../config/config";
 import { getUserToken } from "../../auth/userAuth";
@@ -40,7 +40,7 @@ const PresenterProfile = () => {
 				</Link>
 			</div>
 			<h1>Your Workshops</h1>
-			<motion.div
+			<div
 				className="publications"
 				initial={{ y: 100, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
@@ -49,7 +49,7 @@ const PresenterProfile = () => {
 				{workshops.map((workshop) => {
 					return <PublicationCard publication={workshop} key={workshop._id} />;
 				})}
-			</motion.div>
+			</div>
 		</div>
 	);
 };

@@ -73,6 +73,7 @@ const LoginForm = () => {
 	};
 
 	return (
+		
 		<div className="login-content">
 			<ToastContainer
 				position="top-center"
@@ -85,20 +86,21 @@ const LoginForm = () => {
 				draggable
 				pauseOnHover
 			/>
-			<h1>Login</h1>
-			<motion.form
+			<div class="bg-img">
+			<form
 				className="login-form"
 				onSubmit={handleLogin}
 				initial={{ y: 100, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ type: "tween", duration: 0.8 }}
 			>
-				<motion.div
+				<div
 					className="user-credentials"
 					initial={{ y: 50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ type: "tween", duration: 0.8, delay: 0.2 }}
 				>
+					<h2>Login</h2>
 					<label htmlFor="username">Username</label>
 					<input
 						type="username"
@@ -123,17 +125,20 @@ const LoginForm = () => {
 							setLoginUser({ ...loginUser, password: e.target.value })
 						}
 					/>
-				</motion.div>
-				<motion.div
+				</div>
+				<div
 					className="user-type-selection"
 					initial={{ y: 50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ type: "tween", duration: 0.8, delay: 0.3 }}
 				>
 					<div className="researcher">
+					
 						<input
 							type="radio"
+							
 							name="user-type"
+							
 							id="researcher"
 							value="researcher"
 							required
@@ -142,8 +147,10 @@ const LoginForm = () => {
 							}
 							disabled={disabled}
 						/>
+						
 						<label htmlFor="researcher">Researcher</label>
 					</div>
+					
 					<div className="presenter">
 						<input
 							type="radio"
@@ -156,7 +163,7 @@ const LoginForm = () => {
 							}
 							disabled={disabled}
 						/>
-						<label htmlFor="presenter">Workshop Presenter</label>
+						<label htmlFor="presenter"> Presenter</label>
 					</div>
 					<div className="attendee">
 						<input
@@ -172,8 +179,8 @@ const LoginForm = () => {
 						/>
 						<label htmlFor="attendee">Attendee</label>
 					</div>
-				</motion.div>
-				<motion.p
+				</div>
+				<p
 					initial={{ y: 50, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ type: "tween", duration: 0.8, delay: 0.4 }}
@@ -182,8 +189,8 @@ const LoginForm = () => {
 					<Link to="/auth/register" className="register-now">
 						Register
 					</Link>
-				</motion.p>
-				<motion.button
+				</p>
+				<button
 					type="submit"
 					className="gradient-cta"
 					initial={{ y: 10, opacity: 0 }}
@@ -191,9 +198,11 @@ const LoginForm = () => {
 					transition={{ type: "tween", duration: 0.8, delay: 0.5 }}
 				>
 					Login
-				</motion.button>
-			</motion.form>
+				</button>
+			</form>
+			</div>
 		</div>
+		
 	);
 };
 
