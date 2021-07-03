@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 
 const UserItemCard = ({ publication }) => {
 	return (
+		<div className="item-container">
 		<div className="item-card">
 			<div className="item-text-content">
-				<h2>{publication.topic}</h2>
+				<h2>Topic : {publication.topic}</h2>
 				<p>
 					{publication.dueDate
 						? `Due Time - ${new Date(
@@ -13,10 +14,10 @@ const UserItemCard = ({ publication }) => {
 						  ).toDateString()} - ${new Date(
 								publication.dueDate
 						  ).toLocaleTimeString()}`
-						: `Payment Status - ${!publication.isPaid ? "Not Paid" : "Paid"}`}
+						: ` ${!publication.isPaid ? "Not Paid" : "Paid"}`}
 				</p>
 				<p>
-					Approval Status -{" "}
+					{" "}
 					<span
 						className={
 							publication.isApproved === "rejected"
@@ -29,9 +30,12 @@ const UserItemCard = ({ publication }) => {
 						{publication.isApproved}
 					</span>
 				</p>
+				<center>
 				<p className="light">
-					Submitted on - {new Date(publication.createdAt).toDateString()}
+					Submitted on : {new Date(publication.createdAt).toDateString()}
 				</p>
+				</center>
+			</div>
 			</div>
 			<div className="item-action-content">
 				{!publication.dueDate &&
@@ -41,15 +45,16 @@ const UserItemCard = ({ publication }) => {
 							Pay
 						</Link>
 				)}
-				<Link
+				<Link className="download"
 					to={{
 						pathname: publication.src,
 					}}
 					target="blank"
 				>
-					Download
+					<center>Download</center>
 				</Link>
 			</div>
+		
 		</div>
 	);
 };

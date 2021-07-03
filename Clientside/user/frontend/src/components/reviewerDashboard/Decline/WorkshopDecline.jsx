@@ -24,18 +24,19 @@ const WorkshopDecline = () => {
   }, []);
   return (
     <div>
-      <h3>Diclined Workshops</h3>
+      <h2>Rejected Workshop Proposals</h2>
 
       <table id="customers">
         <tbody>
           <tr>
-            <th>Date</th>
-            <th>Topic OF WorkShop</th>
+            <th><h2>Uploaded Date</h2></th>
+            <th><h2>Topic OF Workshop Proposal</h2></th>
           </tr>
           {rejectedWorkshop &&
             rejectedWorkshop.map((deletedworkshop) => (
               <tr key={deletedworkshop._id}>
                 <td>
+                  <h2>
 
                   {"   "}
 
@@ -44,8 +45,9 @@ const WorkshopDecline = () => {
                     "   " +
                     new Date(deletedworkshop.createdAt).toLocaleTimeString()
                     }
+                    </h2>
                 </td>
-                <td>{deletedworkshop.topic}</td>
+                <td><h2>{deletedworkshop.topic}</h2></td>
               </tr>
             ))}
         </tbody>

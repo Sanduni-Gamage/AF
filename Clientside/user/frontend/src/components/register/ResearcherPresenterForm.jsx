@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { RegisterDataContext } from "../../context/RegisterFormContext";
 import Loading from "../../helpers/Loading";
 import { BASE_URL } from "../../config/config";
+import { FaFileAlt } from "react-icons/fa";
 
 const PresenterForm = ({ title }) => {
 	const { setCurrentStep, material, setMaterial, userData, setUserData } =
@@ -198,7 +199,7 @@ const PresenterForm = ({ title }) => {
 							/>
 						</div>
 						<div className="last-name">
-							<label htmlFor="material">Upload your Documents</label>
+							<label htmlFor="material">Upload your Documents<FaFileAlt/></label>
 							<input
 								type="file"
 								accept=".pdf, .zip, .rar, .ppt, .pptx"

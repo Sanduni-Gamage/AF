@@ -20,27 +20,29 @@ const WorkshopApproval = () => {
   }, []);
   return (
     <div>
-      <h3>Approved Workshop</h3>
+      <h2>Approved Workshop Proposals</h2>
       <table id="customers">
         <tbody>
           <tr>
-            <th>Due Date</th>
-            <th>Topic</th>
+            <th><h2>Due Date</h2></th>
+            <th><h2>Topic</h2></th>
           </tr>
           {pendingWorkshops &&
             pendingWorkshops.map((approvedworkshop) => (
               <tr key={approvedworkshop._id}>
                 <td>
+                  <h2>
                   {new Date(approvedworkshop.dueDate).toDateString() +
                     " " +
                     new Date(approvedworkshop.dueDate).toLocaleTimeString()}
+                    </h2>
                 </td>
-                <td>{approvedworkshop.topic}</td>
+                <td><h2>{approvedworkshop.topic}</h2></td>
               </tr>
             ))}
         </tbody>
       </table>
-      <hr></hr>
+      
     </div>
   );
 };

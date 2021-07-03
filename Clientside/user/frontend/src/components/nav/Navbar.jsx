@@ -33,7 +33,7 @@ const Navbar = () => {
 				{!isLogin ? (
 					<a><Link to="/">Home</Link></a>
 				) : (
-					<a><Link to={`/auth/user/${getUserType()}/dashboard`}>Dashboard</Link></a>
+					<a><Link to={`/auth/user/${getUserType()}/dashboard`}>My Work</Link></a>
 				)}
 				<a><Link to="/workshops" >Workshops</Link></a>
 				<a><Link to="/publications">Researches</Link></a>

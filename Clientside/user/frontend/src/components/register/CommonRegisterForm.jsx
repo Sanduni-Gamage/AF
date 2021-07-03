@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 
 import { Link } from "react-router-dom";
 
+import { FaUserAlt,FaExpeditedssl } from "react-icons/fa";
 import { RegisterDataContext } from "../../context/RegisterFormContext";
 
 const RegisterForm = () => {
@@ -26,7 +27,7 @@ const RegisterForm = () => {
 					<center><h2>Sign Up To a New Account</h2></center>
 					<div className="name-info">
 						<div className="first-name">
-							<label htmlFor="first-name">First Name</label>
+							<label htmlFor="first-name">First Name <FaUserAlt/></label>
 							<input
 								type="text"
 								placeholder="Enter Your First Name"
@@ -69,7 +70,7 @@ const RegisterForm = () => {
 							setUserData({ ...userData, username: e.target.value })
 						}
 					/>
-					<label htmlFor="password">Password</label>
+					<label htmlFor="password">Password <FaExpeditedssl/></label>
 					<input
 						type="password"
 						name="password"

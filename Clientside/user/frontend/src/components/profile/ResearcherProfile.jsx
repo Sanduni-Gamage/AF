@@ -40,7 +40,7 @@ const ResearcherProfile = () => {
 					Add new Research 
 				</Link>
 			</div>
-			<h1>Your Research Uploads</h1>
+			<h1> Research Paper Uploads</h1>
 			<div
 				className="publications"
 				initial={{ y: 100, opacity: 0 }}

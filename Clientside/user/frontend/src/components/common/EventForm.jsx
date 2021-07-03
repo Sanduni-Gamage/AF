@@ -55,7 +55,7 @@ const PresenterForm = ({ title }) => {
 		});
 
 		if (response.ok) {
-			toast.success(`Your ${materialType} successfully submitted to review.`);
+			toast.success(`Your ${materialType} was successfully submitted and will be reviewed for approval.`);
 			setMaterial({});
 		} else {
 			toast.error("Sorry, something went wrong.");
@@ -76,13 +76,14 @@ const PresenterForm = ({ title }) => {
 				pauseOnHover
 			/>
 			{file && <Loading file={file} setFile={setFile} />}
-			<h1>Create new {title}</h1>
+			
 			<form
 				className="login-form"
 				initial={{ x: 300, opacity: 0 }}
 				animate={{ x: 0, opacity: 1 }}
 				transition={{ type: "tween", duration: 0.8 }}
 			>
+				<center><h2>Upload New {title}</h2></center>
 				<div
 					className="user-credentials"
 					initial={{ x: 100, opacity: 0 }}
@@ -148,7 +149,7 @@ const PresenterForm = ({ title }) => {
 						transition={{ type: "tween", duration: 0.8, delay: 0.5 }}
 						onClick={handleMaterial}
 					>
-						Submit
+						Upload Document
 					</button>
 				</div>
 			</form>

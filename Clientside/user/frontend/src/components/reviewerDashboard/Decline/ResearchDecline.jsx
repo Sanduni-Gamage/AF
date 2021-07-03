@@ -30,28 +30,31 @@ const ResearchDecline = () => {
 
   return (
     <div>
-      <h3>Diclined Research Papers</h3>
+      <h2>Rejected Research Papers</h2>
       <table id="customers">
         <tbody>
           <tr>
-            <th> Date </th>
-            <th> Topic OF Reserch Paper </th>
+            <th><h2> Uploaded Date </h2></th>
+            <th><h2> Topic OF Reserch Paper</h2> </th>
+            
           </tr>
 
-          <tr>
+          
             {deletedpaper.map((deletedpaper) => (
               <tr key={deletedpaper._id}>
                 <td>
+                  <h2>
                 {
                 new Date(deletedpaper.createdAt).toDateString() +
                   "   "   +
                   new Date(deletedpaper.createdAt).toLocaleTimeString()
                   }
+                  </h2>
               </td>
-                <td>{deletedpaper.topic}</td>
+                <td><h2>{deletedpaper.topic}</h2></td>
               </tr>
             ))}
-          </tr>
+          
         </tbody>
       </table>
     </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+
 
 import { BASE_URL } from "../../config/config";
 import WorkshopPublicationCard from "../common/WorkshopPublicationCard";
@@ -15,8 +15,8 @@ const PublicationList = () => {
 
 	return (
 		<div>
-			<h1>Research Publications</h1>
-			<motion.div
+			<h1>Research Papers</h1>
+			<div
 				className="event-card-content"
 				initial={{ y: 100, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
@@ -25,7 +25,7 @@ const PublicationList = () => {
 				{publications.map((workshop) => {
 					return <WorkshopPublicationCard event={workshop} />;
 				})}
-			</motion.div>
+			</div>
 		</div>
 	);
 };

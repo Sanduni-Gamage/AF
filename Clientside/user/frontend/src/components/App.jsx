@@ -29,6 +29,12 @@ import WorkshopCard from "./reviewerDashboard/container/WorkshopContainer";
 import Download from "../pages/Download";
 import Workshop from "../pages/Workshop";
 import Payment from "./ResearcherPayment/payment";
+import PendingResearch from "./reviewerDashboard/New/NewResearch";
+import PendingWorkshop from "./reviewerDashboard/New/NewWorkshop";
+import ApproveResearch from "./reviewerDashboard/Approve/ReasearchApproval";
+import ApproveWorkshop from "./reviewerDashboard/Approve/WorkshopApproval";
+import RejectResearch from "./reviewerDashboard/Decline/ResearchDecline";
+import RejectWorkshop from "./reviewerDashboard/Decline/WorkshopDecline";
 
 import Publication from "../pages/Publication";
 import EventForm from "./common/EventForm";
@@ -105,6 +111,26 @@ const App = () => {
 				<PrivateReviewerRoute exact path="/auth/user/reviewer/workshop/card/:id">
 					<WorkshopCard/>
 				</PrivateReviewerRoute>
+				<PrivateReviewerRoute exact path="/auth/user/reviewer/research/pending">
+					<PendingResearch/>
+				</PrivateReviewerRoute>
+				<PrivateReviewerRoute exact path="/auth/user/reviewer/workshop/pending">
+					<PendingWorkshop/>
+				</PrivateReviewerRoute>
+				<PrivateReviewerRoute exact path="/auth/user/reviewer/workshop/approve">
+					<ApproveWorkshop/>
+				</PrivateReviewerRoute>
+				<PrivateReviewerRoute exact path="/auth/user/reviewer/research/approve">
+					<ApproveResearch/>
+				</PrivateReviewerRoute>
+				<PrivateReviewerRoute exact path="/auth/user/reviewer/research/reject">
+					<RejectResearch/>
+				</PrivateReviewerRoute>
+				<PrivateReviewerRoute exact path="/auth/user/reviewer/workshop/reject">
+					<RejectWorkshop/>
+				</PrivateReviewerRoute>
+
+
 
 
 				

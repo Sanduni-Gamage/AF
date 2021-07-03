@@ -6,19 +6,19 @@
   align-items: center;
   border: 1px;
   border-radius: 1px;
-  border-color: rgb(21, 18, 71);
+  border-color: rgb(19, 18, 18);
 }
 
 #customers td,
 #customers th {
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgb(255, 237, 71);
   border: 1px;
   justify-content: center;
   text-align: left;
 }
 
-#customers tr:nth-child(even) {
-  background-color: #fdfdfd;
+#customers tr {
+  background-color: #f5e028;
   border: 1px;
   border-radius: 20px;
   justify-content: center;
@@ -26,18 +26,17 @@
 }
 
 #customers tr:hover {
-  background-color: rgb(193, 218, 247);
 }
 
 #customers th {
   padding-top: 8px;
   padding-bottom: 8px;
   text-align: center;
-  background-color: rgb(21, 18, 71);
+  background-color: rgb(32, 32, 29);
   color: white;
 }
 #customer tr {
   border: 1px;
   border-radius: 1px;
-  border-color: rgb(89, 86, 153);
+  border-color: rgb(14, 14, 15);
 }

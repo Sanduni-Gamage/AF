@@ -21,21 +21,23 @@ const ResearchApproval = () => {
 
   return (
     <div>
-      <h3>Approved Research Papers</h3>
+      <h2>Approved Research Papers</h2>
       <table id="customers">
         <tr>
-          <th>Date</th>
-          <th>Topic</th>
+          <th><h2>Date</h2></th>
+          <th><h2>Topic</h2></th>
         </tr>
         {approvePaper &&
           approvePaper.map((approvedpaper) => (
             <tr key={approvedpaper._id}>
               <td>
+                <h2>
                 {new Date(approvedpaper.createdAt).toDateString() +
                   " " +
                   new Date(approvedpaper.createdAt).toLocaleTimeString()}
+                  </h2>
               </td>
-              <td>{approvedpaper.topic}</td>
+              <td><h2>{approvedpaper.topic}</h2></td>
             </tr>
           ))}
       </table>

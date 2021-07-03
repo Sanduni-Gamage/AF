@@ -3,9 +3,10 @@ import { useHistory } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { FaCcVisa,FaCcAmex,FaCcMastercard,FaLandmark,FaEnvelope,FaPhoneSquareAlt } from "react-icons/fa";
 import { RegisterDataContext } from "../../context/RegisterFormContext";
 import { BASE_URL } from "../../config/config";
+
 
 const AttendeeForm = () => {
 	const { setCurrentStep, setUserData, userData, payment, setPayment } =
@@ -51,24 +52,26 @@ const AttendeeForm = () => {
 				draggable
 				pauseOnHover
 			/>
-			<h1>Attendee Registration</h1>
+			
 			<form
 				className="login-form"
 				initial={{ x: 300, opacity: 0 }}
 				animate={{ x: 0, opacity: 1 }}
 				transition={{ type: "tween", duration: 0.8 }}
 			>
+				<h2>Attendee Registration</h2>
 				<div
 					className="user-credentials"
 					initial={{ x: 100, opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
 					transition={{ type: "tween", duration: 0.8, delay: 0.2 }}
 				>
-					<label htmlFor="email">Email</label>
+					<label htmlFor="email">Email <FaEnvelope/></label>
 					<input
 						type="email"
 						name="email"
 						id="email"
+						placeholder="john@example.com"
 						required
 						autoComplete="off"
 						value={userData.email}
@@ -76,7 +79,7 @@ const AttendeeForm = () => {
 							setUserData({ ...userData, email: e.target.value })
 						}
 					/>
-					<label htmlFor="mobile-number">Contact Number</label>
+					<label htmlFor="mobile-number">Contact Number <FaPhoneSquareAlt/></label>
 					<input
 						type="tel"
 						name="mobile-number"
@@ -91,11 +94,12 @@ const AttendeeForm = () => {
 					/>
 					<div className="name-info">
 						<div className="first-name">
-							<label htmlFor="card-number">Card Number</label>
+							<label htmlFor="card-number">Card Number <FaCcVisa className="icon"/><FaCcMastercard/><FaCcAmex/></label>
 							<input
 								type="text"
 								name="card-number"
 								id="card-number"
+								placeholder="1111-2222-3333-4444"
 								required
 								autoComplete="off"
 								value={payment.cardNumber}
@@ -110,6 +114,7 @@ const AttendeeForm = () => {
 								type="text"
 								name="last-name"
 								id="last-name"
+								placeholder="352"
 								required
 								autoComplete="off"
 								maxLength="3"
@@ -120,6 +125,76 @@ const AttendeeForm = () => {
 							/>
 						</div>
 					</div>
+
+					<div className="name-info">
+						<div className="first-name">
+							<label htmlFor="state">State</label>
+							<input
+								type="text"
+								name="state"
+								id="state"
+								placeholder="NY"
+								required
+								autoComplete="off"
+								value={payment.state}
+								onChange={(e) =>
+									setPayment({ ...payment, state: e.target.value })
+								}
+							/>
+						</div>
+						<div className="last-name">
+							<label htmlFor="Address">Address</label>
+							<input
+								type="text"
+								name="Address"
+								id="Address"
+								placeholder="542 W. 15th Street"
+								required
+								autoComplete="off"
+								maxLength="3"
+								value={payment.address}
+								onChange={(e) =>
+									setPayment({ ...payment, address: e.target.value })
+								}
+							/>
+						</div>
+					</div>
+
+
+					<div className="name-info">
+						<div className="first-name">
+							<label htmlFor="city">City <FaLandmark/></label>
+							<input
+								type="text"
+								name="city"
+								id="city"
+								placeholder="New York"
+								required
+								autoComplete="off"
+								value={payment.city}
+								onChange={(e) =>
+									setPayment({ ...payment, city: e.target.value })
+								}
+							/>
+						</div>
+						<div className="last-name">
+							<label htmlFor="Zip">Zip</label>
+							<input
+								type="text"
+								name="Zip"
+								id="Zip"
+								placeholder="10001"
+								required
+								autoComplete="off"
+								maxLength="3"
+								value={payment.zip}
+								onChange={(e) =>
+									setPayment({ ...payment, zip: e.target.value })
+								}
+							/>
+						</div>
+					</div>
+
 					<div className="name-info">
 						<div className="first-name">
 							<label htmlFor="exp-date">Expiration Date</label>
@@ -145,9 +220,9 @@ const AttendeeForm = () => {
 								required
 								autoComplete="off"
 								maxLength="3"
-								value="Rs. 1000"
+								value="10 $"
 								disabled
-								onChange={() => setPayment({ ...payment, amount: 1000 })}
+								onChange={() => setPayment({ ...payment, amount: 10 })}
 							/>
 						</div>
 					</div>

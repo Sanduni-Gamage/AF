@@ -33,7 +33,7 @@ const ResearchPaperApproval = () => {
     });
 
     if (res.ok) {
-      toast.success("Successfully Approved");
+      toast.success("Workshop Proposal was Successfully Approved");
       setbtnClick(id);
     }
   };
@@ -46,7 +46,7 @@ const ResearchPaperApproval = () => {
       },
     });
     if (res.ok) {
-      toast.success("Successfully Rejected");
+      toast.success("Workshop Proposal Successfully Rejected");
       setbtnClick(id);
     }
   };
@@ -63,22 +63,11 @@ const ResearchPaperApproval = () => {
         draggable
         pauseOnHover
       />
-      <h3>Submited WorkShop</h3>
+      <h2>Submited WorkShop</h2>
       <hr></hr>
       <div className="reviewer-research-card-container">
         <div className="reviewer-research-card">
-          <div>
-            <div>
-              <span className="reviewer-research-date">Created Date</span>
-            </div>
-            <hr></hr>
-            <span className="reviewer-research-date">
-            {
-            new Date(card.dueDate).toDateString() +
-                " " +
-                new Date(card.dueDate).toLocaleTimeString()}
-            </span>
-          </div>
+         
           <header>
             <hr></hr>
             <h2>{card.topic}</h2>
@@ -94,24 +83,31 @@ const ResearchPaperApproval = () => {
                     }}
                     target="blank"
                   >
-                    <div className="cardbtn">Download</div>
+                    <div className="cardbtn"><h2>Download</h2></div>
                   </Link>
                 </div>
               </td>
+              </tr>
+              <tr>
               <td>
                 <button
-                  className="cardbtn"
+                  className="cardbtn1"
                   onClick={() => Approvehandle(card._id)}
-                >
+                ><h2>
                   Approve
+                  </h2>
                 </button>
               </td>
+              </tr>
+              <tr>
               <td>
                 <button
-                  className="cardbtn"
+                  className="cardbtn2"
                   onClick={() => Rejecthandle(card._id)}
                 >
+                  <h2>
                   Reject
+                  </h2>
                 </button>
               </td>
             </tr>

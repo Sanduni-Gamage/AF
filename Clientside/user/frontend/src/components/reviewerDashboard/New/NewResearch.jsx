@@ -24,34 +24,34 @@ const NewResearch = () => {
   }, []);
   return (
     <div>
-      <h3>Pending Research Papers</h3>
+      <h2> Research Papers to be Reviewed</h2>
       <hr></hr>
       <div>
         <table id="customers">
           <tr>
-            <th>Date</th>
-            <th>Topic</th>
-            <th>Action</th>
+            <th><h2>Uploaded Date</h2></th>
+            <th><h2>Research Topic</h2></th>
+            <th><h2>Review Paper</h2></th>
           </tr>
           {pendingPublications &&
             pendingPublications.map((paper) => (
               <tr key={paper._id}>
-                <td>{" "}
+                <td><h2>{" "}
                   {
                   new Date(paper.createdAt).toDateString() +
                     " " +
                     new Date(paper.createdAt).toLocaleTimeString()
                     }
-                    
+                    </h2>
                     </td>
-                <td>{paper.topic}</td>
+                <td><h2>{paper.topic}</h2></td>
                 <td>
                   <div>
                     <Link
                       className="cardbtn"
                       to={`/auth/user/reviewer/research/card/${paper._id}`}
                     >
-                      view Card
+                     <h2>Review Paper</h2>
                     </Link>
                   </div>
                 </td>

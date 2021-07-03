@@ -35,7 +35,7 @@ const ResearchPaperApproval = () => {
     });
 
     if (res.ok) {
-      toast.success("Successfully Approved");
+      toast.success("Resaerch paper Successfully Approved");
       setbtnClick(id);
     }
   };
@@ -48,7 +48,7 @@ const ResearchPaperApproval = () => {
       },
     });
     if (res.ok) {
-      toast.success("Successfully Rejected");
+      toast.success("Research paper Successfully Rejected");
       setbtnClick(id);
     }
   };
@@ -67,24 +67,11 @@ const ResearchPaperApproval = () => {
         draggable
         pauseOnHover
       />
-      <h3>Researcher Paper Request</h3>
-      <hr></hr>
+      <h2>Research Paper Review</h2>
+      
       <div className="reviewer-research-card-container">
         <div className="reviewer-research-card">
-          <div>
-            <div>
-
-              <span className="reviewer-research-date">Created Date</span>
-            </div>
-
-            <hr></hr>
-
-            {
-            new Date(card.createdAt).toDateString() +
-                "   " +
-                new Date(card.createdAt).toLocaleTimeString()
-                }
-          </div>
+          
 
           <header>
 
@@ -103,24 +90,30 @@ const ResearchPaperApproval = () => {
                     }}
                     target="blank"
                   >
-                    <div className="cardbtn">Download</div>
+                    <div className="cardbtn"><h2>Download Paper</h2></div>
                   </Link>
                 </div>
               </td>
+              </tr>
+              <tr>
               <td>
                 <button
-                  className="cardbtn"
+                  className="cardbtn1"
                   onClick={() => Approvehandle(card._id)}
-                >
+                ><h2>
                   Approve
+                  </h2>
                 </button>
               </td>
+              </tr>
+              <tr>
               <td>
                 <button
-                  className="cardbtn"
+                  className="cardbtn2"
                   onClick={() => Rejecthandle(card._id)}
-                >
+                ><h2>
                   Reject
+                  </h2>
                 </button>
               </td>
             </tr>

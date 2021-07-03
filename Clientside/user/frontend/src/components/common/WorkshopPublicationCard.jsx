@@ -3,15 +3,21 @@ import { Link } from "react-router-dom";
 
 const WorkshopPublicationCard = ({ event }) => {
 	return (
-		<div className="event-card">
-			<div className="event-details">
+		<div className="item-container">
+		<div className="item-card1">
+			<table>
+			<tr>
 				<h2>{event.topic}</h2>
+				</tr>
+				<tr>
 				<div className="conductor-details">
 					<h3 className={!event.dueDate && "grey"}>
 						{event.dueDate ? "Conduct" : "Published"} By{" "}
 						{event.createdBy.firstName + " " + event.createdBy.lastName}
 					</h3>
 				</div>
+				</tr>
+				<tr>
 				{event.dueDate ? (
 					<p>
 						On{" "}
@@ -21,7 +27,7 @@ const WorkshopPublicationCard = ({ event }) => {
 					</p>
 				) : (
 					<Link
-						to={{
+					className="download1" to={{
 							pathname: event.src,
 						}}
 						target="blank"
@@ -29,6 +35,8 @@ const WorkshopPublicationCard = ({ event }) => {
 						Download
 					</Link>
 				)}
+				</tr>
+				</table>
 			</div>
 		</div>
 	);

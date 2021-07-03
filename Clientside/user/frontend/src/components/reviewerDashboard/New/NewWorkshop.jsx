@@ -25,19 +25,20 @@ const NewWorkshop = () => {
   }, []);
   return (
     <div>
-      <h3> Pending Workshops </h3>
+      <h2>  Workshops Proposals To be Reviewed </h2>
       <hr></hr>
       <div>
         <table id="customers">
           <tr>
-            <th>Date</th>
-            <th>Topic</th>
-            <th>Action</th>
+            <th><h2>Date</h2></th>
+            <th><h2>Topic</h2></th>
+            <th><h2>Action</h2></th>
           </tr>
           {pendingWorkshop &&
             pendingWorkshop.map((workshop) => (
               <tr key={workshop._id}>
                  <td>
+                   <h2>
                   {" "}
 
                   {
@@ -45,15 +46,16 @@ const NewWorkshop = () => {
                     "   " +
                     new Date(workshop.dueDate).toLocaleTimeString()
                     }
+                    </h2>
                 </td>
-                <td>{workshop.topic}</td>
+                <td><h2>{workshop.topic}</h2></td>
                 <td>
                   <div>
                     <Link
                       className="cardbtn"
                       to={`/auth/user/reviewer/workshop/card/${workshop._id}`}
                     >
-                      view Card
+                      <h2>view Card</h2>
                     </Link>
                   </div>
                 </td>
@@ -61,7 +63,7 @@ const NewWorkshop = () => {
             ))}
         </table>
       </div>
-      <hr></hr>
+      
     </div>
   );
 };

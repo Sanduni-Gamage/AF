@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { FaUserAlt,FaExpeditedssl } from "react-icons/fa";
 import { BASE_URL } from "../../config/config";
 import { saveUserAuth } from "../../auth/userAuth";
 import { RegisterDataContext } from "../../context/RegisterFormContext";
@@ -100,8 +100,8 @@ const LoginForm = () => {
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ type: "tween", duration: 0.8, delay: 0.2 }}
 				>
-					<h2>Login</h2>
-					<label htmlFor="username">Username</label>
+					<h2>Login Now ..</h2>
+					<label htmlFor="username">Username <FaUserAlt/></label>
 					<input
 						type="username"
 						name="username"
@@ -113,7 +113,7 @@ const LoginForm = () => {
 							setLoginUser({ ...loginUser, username: e.target.value });
 						}}
 					/>
-					<label htmlFor="password">Password</label>
+					<label htmlFor="password">Password <FaExpeditedssl/></label>
 					<input
 						type="password"
 						name="password"
@@ -132,6 +132,7 @@ const LoginForm = () => {
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ type: "tween", duration: 0.8, delay: 0.3 }}
 				>
+					<h3>User Type</h3>
 					<div className="researcher">
 					
 						<input
@@ -185,9 +186,9 @@ const LoginForm = () => {
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ type: "tween", duration: 0.8, delay: 0.4 }}
 				>
-					Haven't registered yet ?
+					Haven't Registered yet ?
 					<Link to="/auth/register" className="register-now">
-						Register
+						Register Now
 					</Link>
 				</p>
 				<button

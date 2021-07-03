@@ -25,7 +25,7 @@ const AttendeeProfile = () => {
 	}, []);
 	return (
 		<div className="researcher-profile">
-			<div className="profile-container">
+			<div className="profile-container1">
 				<ProfileCard profile={profile} />
 			</div>
 			<div
@@ -33,10 +33,8 @@ const AttendeeProfile = () => {
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ type: "tween", duration: 0.8, delay: 0.3 }}
 			>
-				<h1>You are successfully registered for the conference.</h1>
-				<h1 className="attendee-greeting">
-					Your token number is <span className="blue">{profile.id}</span>
-				</h1>
+				
+				
 			</div>
 		</div>
 	);
