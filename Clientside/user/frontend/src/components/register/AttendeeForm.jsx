@@ -99,6 +99,7 @@ const AttendeeForm = () => {
 								type="text"
 								name="card-number"
 								id="card-number"
+								maxLength="6"
 								placeholder="1111-2222-3333-4444"
 								required
 								autoComplete="off"
@@ -151,7 +152,7 @@ const AttendeeForm = () => {
 								placeholder="542 W. 15th Street"
 								required
 								autoComplete="off"
-								maxLength="3"
+								
 								value={payment.address}
 								onChange={(e) =>
 									setPayment({ ...payment, address: e.target.value })

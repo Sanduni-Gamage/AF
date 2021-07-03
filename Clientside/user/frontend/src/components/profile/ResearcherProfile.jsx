@@ -7,6 +7,8 @@ import { getUserToken } from "../../auth/userAuth";
 import "../../pages/Researcher";
 import PublicationCard from "../common/UserItemCard";
 import ProfileCard from "./ProfileCard";
+import { FaFolderPlus } from "react-icons/fa";
+
 
 const ResearcherProfile = () => {
 	const [publications, setPublications] = useState([]);
@@ -36,8 +38,8 @@ const ResearcherProfile = () => {
 		<div className="researcher-profile">
 			<div className="profile-container">
 				<ProfileCard profile={profile} />
-				<Link className="add-new" to="/publication/create">
-					Add new Research 
+				<Link className="add-new" to="/publication/create" >
+					Add new Research
 				</Link>
 			</div>
 			<h1> Research Paper Uploads</h1>

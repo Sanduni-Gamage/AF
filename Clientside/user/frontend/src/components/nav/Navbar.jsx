@@ -47,7 +47,7 @@ const Navbar = () => {
 			>
 				{!isLogin ? (
 					<div className="nav-cta" id={isMobile ? "menu-open-cta" : ""}>
-						<Link to="/auth/login">Login</Link>
+						<Link  to="/auth/login"className="active">Login</Link>
 						<Link to="/auth/register" className="active">
 							Register
 						</Link>

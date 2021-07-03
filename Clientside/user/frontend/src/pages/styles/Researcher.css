@@ -91,13 +91,14 @@
   border: none;
   color: white;
   padding: 12px 30px;
+  width: 100px;
   cursor: pointer;
   font-size: 20px;
   margin-left: 650px;
   border: rgb(14, 13, 13);
   border-width: 5px;
   align-content: center;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .item-container .download {
@@ -119,7 +120,7 @@
   padding: 12px 30px;
   cursor: pointer;
   font-size: 20px;
-  width: 160px;
+  width: 200px;
   border-radius: 10px;
   align-content: center;
 }

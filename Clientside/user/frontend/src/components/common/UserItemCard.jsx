@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaDownload } from "react-icons/fa";
 
 const UserItemCard = ({ publication }) => {
 	return (
@@ -51,7 +52,7 @@ const UserItemCard = ({ publication }) => {
 					}}
 					target="blank"
 				>
-					<center>Download</center>
+					<center>Download <FaDownload/></center>
 				</Link>
 			</div>
 		
